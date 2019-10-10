@@ -1,32 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/services">Services</router-link> |
-      <router-link to="/about-us">About us</router-link> |
-      <router-link to="/culture">Culture</router-link> |
-      <router-link to="/contact">Contact</router-link>
-    </div>
+  <main id="app">
+    <Nav/>
     <router-view/>
-  </div>
+  </main>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import Nav from '@/views/components/Nav.vue'; // @ is an alias to /src
+
+@Component({
+  components: {
+    Nav,
+  },
+})
+export default class Home extends Vue {}
+</script>
+
+
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "./styles/main.scss";
 </style>

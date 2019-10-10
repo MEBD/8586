@@ -1,0 +1,43 @@
+$tablet-size: 769px;
+$desktop-size: 1281px;
+
+// Size
+$gap: (30/16)*1rem;
+
+// Color
+$white: #F5F5F5;
+$primary: #FFF500;
+$black: #282828;
+
+// Typography
+$font-famyly: "lato", sans-serif;
+$font-famyly-heading: "Raleway", sans-serif;
+
+$font-size-1: (80/16)*1em;
+$line-height-1: 1.2;
+
+$font-size-2: (40/16)*1em;
+$line-height-2: 1.2;
+
+$font-size-3: (26/16)*1em;
+$line-height-3: 1.3;
+
+$font-size-4: (22/16)*1em;
+$line-height-4: 1.3;
+
+$font-size-5: (18/16)*1em;
+$line-height-5: 1.4;
+
+$font-size-6: (16/16)*1em;
+$line-height-6: 1.4;
+
+$font-size-7: (14/16)*1em;
+$line-height-7: 1.6;
+
+// Depth
+$z-nav: 100;
+
+// Ease
+$ease-in: cubic-bezier(1.0, 0.0, 1.0, 0.2);
+$ease-in-out: cubic-bezier(1.0, 0.0, 0.0, 1.0);
+$ease-out: cubic-bezier(0.0, 1.0, 0.2, 1.0);

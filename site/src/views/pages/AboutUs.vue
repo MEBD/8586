@@ -3,7 +3,7 @@
     <header>
       <h1>AboutUs</h1>
     </header>
-    <HelloWorld />
+    <HelloWorld/>
   </section>
 </template>
 
@@ -18,3 +18,5 @@ import HelloWorld from "@/views/components/HelloWorld.vue"; // @ is an alias to 
 })
 export default class AboutUs extends Vue {}
 </script>
+
+<style scoped lang="scss"></style>
