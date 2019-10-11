@@ -38,7 +38,7 @@ export default class Home extends Vue {
       if (this.index === (this as any).$t.home.title_keywords.length) {
         this.index = 0;
       }
-    }, 150);
+    }, 500);
   }
 
   /**
