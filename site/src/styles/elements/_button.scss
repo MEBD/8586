@@ -1,0 +1,46 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    
+    width: auto;
+    height: $gap*2;
+    padding: 0 $gap*0.75;
+    
+    color: $black;
+    background: $white;
+
+    letter-spacing: 1px;
+    font-size: $font-size-7;
+    font-weight: 700;
+    font-family: $font-famyly;
+
+    span {
+        display: block;
+    }
+
+    &:hover {
+        background: $primary;
+    }
+
+    &.primary {
+        background: $primary;
+
+        &:hover {
+            background: $white;
+        }
+    }
+
+    &.black {
+        background: $black;
+        color: $white;
+
+        &:hover {
+            background: $primary;
+            color: $black;
+        }
+    }
+}

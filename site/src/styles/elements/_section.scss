@@ -1,6 +1,18 @@
 section {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
+    padding: $gap*4 0;
+
+    .underscore {
+        display: block;
+        position: absolute;
+        left: $gap*2;
+        bottom: $gap*2;
+        width: $gap*2;
+        height: 10px;
+        background: $white;
+    }
 }

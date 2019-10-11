@@ -1,22 +1,34 @@
 <template>
-  <section>
+  <section class="contact">
     <header>
       <h1>Contact</h1>
     </header>
-    <HelloWorld/>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/views/components/HelloWorld.vue"; // @ is an alias to /src
 
 @Component({
-  components: {
-    HelloWorld
-  }
+  components: {}
 })
-export default class Contact extends Vue {}
+export default class Contact extends Vue {
+  /**
+   * mounted
+   */
+  public mounted(): void {
+    this.$store.state.ui.color = "white";
+    this.$store.state.ui.background = "black";
+  }
+}
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import "../../styles/utilities/variables";
+
+.contact {
+  header {
+    padding: $gap * 4 $gap * 2;
+  }
+}
+</style>

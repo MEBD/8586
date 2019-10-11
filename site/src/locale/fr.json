@@ -1,0 +1,63 @@
+{
+    "nav": {
+        "services": "Services",
+        "about_us": "About us",
+        "culture": "Culture",
+        "contact": "Contact"
+    },
+    "home": {
+        "title": "We made",
+        "title_keywords": [
+            "Brands",
+            "Websites",
+            "Mobile apps",
+            "Magic"
+        ],
+        "subtitle": "We develop digital solutions for create creative connections and innovative experiences using the latest technologies.",
+        "cta": "See our services"
+    },
+    "services": {
+        "title": "Si no lo sabemos, lo aprendemos.",
+        "subtitle": "Somos un equipo multidisiplinario el cual se complementa perfectamente para lograr proyectos que comunican y consolidan ideas de forma confiable."
+    },
+    "about_us": {
+        "title": "Quien somos?",
+        "subtitle": "Es un grupo de personas que aman su trabajo. Nos apaciona la magia de internet ya que es el entorno perfecto estar en constante movimiento y nosotros no paramos nunca.",
+        "team": {
+            "title": "The team",
+            "list": [
+                {
+                    "name": "Juan",
+                    "role": "Amos de la internet",
+                    "img": "juan"
+                },
+                {
+                    "name": "Matias",
+                    "role": "Amos de la internet",
+                    "img": "matias"
+                },
+                {
+                    "name": "Marie",
+                    "role": "Amos de la internet",
+                    "img": "marie"
+                },
+                {
+                    "name": "Ignacia",
+                    "role": "Amos de la internet",
+                    "img": "ignacia"
+                },
+                {
+                    "name": "Rodriga",
+                    "role": "Amos de la internet",
+                    "img": "rodriga"
+                },
+                {
+                    "name": "Thiago",
+                    "role": "Amos de la internet",
+                    "img": "thiago"
+                }
+            ]
+        },
+        "cta": "Check our culture"
+    }
+}

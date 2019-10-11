@@ -1,0 +1,118 @@
+{
+    "nav": {
+        "services": "Services",
+        "about_us": "About us",
+        "culture": "Culture",
+        "contact": "Contact"
+    },
+    "home": {
+        "title": "We made",
+        "title_keywords": [
+            "Brands",
+            "Websites",
+            "Mobile apps",
+            "Magic"
+        ],
+        "subtitle": "We develop digital solutions for create creative connections and innovative experiences using the latest technologies.",
+        "cta": "See our services"
+    },
+    "services": {
+        "title": "If we do not know, we learn",
+        "subtitle": "We are a multidisciplinary team which perfectly complements to achieve projects that communicate and consolidate ideas reliably.",
+        "strategy": {
+            "title": "Strategy",
+            "list": [
+                "Research",
+                "Planning",
+                "Ecosystems",
+                "Social strategy",
+                "Brand concept",
+                "Business rules",
+                "Content Development"
+            ]
+        },
+        "creative": {
+            "title": "Creative",
+            "list": [
+                "Brand design",
+                "Creative campaign",
+                "Design UI / UX",
+                "Visual concept",
+                "Product design",
+                "Radaction"
+            ]
+        },
+        "technology": {
+            "title": "Technology",
+            "list": [
+                "HTML/JS/CSS",
+                "PHP/Python/.Net",
+                "Native apps",
+                "CMS y platforms",
+                "Mails system"
+            ]
+        },
+        "cta": "Meet us"
+    },
+    "about_us": {
+        "title": "Who are we?",
+        "subtitle": "We are a group of people who love their work. We find the magic of the internet because it is the perfect environment to be in constant motion and we never stop.",
+        "team": {
+            "title": "The team",
+            "list": [
+                {
+                    "name": "Juan",
+                    "role": "Amos de la internet",
+                    "img": "juan"
+                },
+                {
+                    "name": "Matias",
+                    "role": "Amos de la internet",
+                    "img": "matias"
+                },
+                {
+                    "name": "Marie",
+                    "role": "Amos de la internet",
+                    "img": "marie"
+                },
+                {
+                    "name": "Ignacia",
+                    "role": "Amos de la internet",
+                    "img": "ignacia"
+                },
+                {
+                    "name": "Rodriga",
+                    "role": "Amos de la internet",
+                    "img": "rodriga"
+                },
+                {
+                    "name": "Thiago",
+                    "role": "Amos de la internet",
+                    "img": "thiago"
+                }
+            ]
+        },
+        "cta": "Check our culture"
+    },
+    "culture": {
+        "list": [
+            {
+                "title": "Cultura",
+                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+            },
+            {
+                "title": "Valores",
+                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+            },
+            {
+                "title": "Visión",
+                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+            },
+            {
+                "title": "Eco",
+                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+            }
+        ],
+        "cta": "Contact us"
+    }
+}
