@@ -20,6 +20,20 @@ export default class Contact extends Vue {
     this.$store.state.ui.color = "white";
     this.$store.state.ui.background = "black";
   }
+
+  /**
+   * transitionIn
+   */
+  public transitionIn(done: any) {
+    done();
+  }
+
+  /**
+   * transitionOut
+   */
+  public transitionOut(done: any) {
+    done();
+  }
 }
 </script>
 

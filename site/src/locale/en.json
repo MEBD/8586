@@ -6,10 +6,11 @@
         "contact": "Contact"
     },
     "home": {
-        "title": "We made",
+        "title": "We make",
         "title_keywords": [
             "Brands",
             "Websites",
+            "Expiriences",
             "Mobile apps",
             "Magic"
         ],
@@ -61,34 +62,39 @@
             "title": "The team",
             "list": [
                 {
-                    "name": "Juan",
-                    "role": "Amos de la internet",
+                    "name": "John",
+                    "role": "Comercial develop",
                     "img": "juan"
                 },
                 {
-                    "name": "Matias",
-                    "role": "Amos de la internet",
+                    "name": "Mati",
+                    "role": "Designer / Fullstack",
                     "img": "matias"
                 },
                 {
                     "name": "Marie",
-                    "role": "Amos de la internet",
+                    "role": "Comercial develop",
                     "img": "marie"
                 },
                 {
-                    "name": "Ignacia",
-                    "role": "Amos de la internet",
-                    "img": "ignacia"
+                    "name": "Nacho",
+                    "role": "Fullstack.Backend",
+                    "img": "ignacio"
                 },
                 {
-                    "name": "Rodriga",
-                    "role": "Amos de la internet",
-                    "img": "rodriga"
+                    "name": "Rodri",
+                    "role": "Fullstack.Backend",
+                    "img": "rodrigo"
                 },
                 {
                     "name": "Thiago",
-                    "role": "Amos de la internet",
+                    "role": "Fullstack.Frontend",
                     "img": "thiago"
+                },
+                {
+                    "name": "Vero",
+                    "role": "Communication creative",
+                    "img": "veronica"
                 }
             ]
         },

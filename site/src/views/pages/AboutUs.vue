@@ -32,7 +32,9 @@
         <ul>
           <li v-for="item in $t.about_us.team.list" :key="item.name">
             <div class="card">
-              <div class="img"></div>
+              <div class="img">
+                <img :src="'./img/team/'+item.img+'.jpg'" alt />
+              </div>
               <div class="info">
                 <h3 class="h4">{{item.name}}</h3>
                 <p>{{item.role}}</p>
@@ -72,6 +74,20 @@ export default class AboutUs extends Vue {
    */
   public beforeDestroy(): void {
     this.$store.state.ui.hideLogo = false;
+  }
+
+  /**
+   * transitionIn
+   */
+  public transitionIn(done: any) {
+    done();
+  }
+
+  /**
+   * transitionOut
+   */
+  public transitionOut(done: any) {
+    done();
   }
 }
 </script>
@@ -114,12 +130,18 @@ export default class AboutUs extends Vue {
       li {
         display: block;
         padding: 0 $gap $gap 0;
-        min-width: $gap * 10;
+        width: $gap * 10;
       }
 
       .img {
         min-height: $gap * 9;
         border: 10px solid $black;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
       }
 
       .info {
