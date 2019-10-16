@@ -23,7 +23,7 @@ export default class Home extends Vue {
   /**
    * transitionIn
    */
-  public transitionIn(el, done): void {
+  public transitionIn(el: any, done: any): void {
     this.$children.forEach((page: any) => {
       if (page.$el === el) {
         page.transitionIn(done);
@@ -34,7 +34,7 @@ export default class Home extends Vue {
   /**
    * transitionOut
    */
-  public transitionOut(el, done): void {
+  public transitionOut(el: any, done: any): void {
     this.$children.forEach((page: any) => {
       if (page.$el === el) {
         page.transitionOut(done);

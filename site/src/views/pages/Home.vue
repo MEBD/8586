@@ -14,13 +14,13 @@
         </router-link>
       </div>
     </header>
-    <span ref="underscore" class="underscore"></span>
+    <span ref="un" class="underscore"></span>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { TweenLite, TimelineLite } from "gsap";
+import { TweenLite, TimelineLite, Power4 } from "gsap";
 
 @Component({
   components: {}
@@ -37,30 +37,25 @@ export default class Home extends Vue {
     this.$store.state.ui.background = "black";
   }
 
+  //gsap.to(graph, { duration: 2.5 ease: CustomEase.create("custom", "M0,0 C0,0.692 0.003,0.798 0.112,0.888 0.248,1 0.504,1 1,1"), y: -500 });
+
   /**
    * transitionIn
    */
   public transitionIn(done: any) {
-    const tl = new TimelineLite();
-    const { title, subtitle, keyword, cta, underscore } = this.$refs;
-
-    tl.from(title, 0.35, { x: 50, opacity: 0 }, 0.0);
-    tl.from(subtitle, 0.35, { x: 50, opacity: 0 }, 0.05);
-    tl.from(cta, 0.35, { x: 50, opacity: 0 }, 0.1);
-    tl.from(
-      underscore,
-      0.35,
-      {
-        width: "80vw",
-        transformOrigin: "0% 0%",
-        opacity: 0,
-        onComplete: () => {
-          done();
-          this.tweenText();
-        }
-      },
-      0.15
-    );
+    const { title, subtitle, cta, un } = this.$refs;
+    //
+    const tl = new TimelineLite({
+      onComplete: () => {
+        done();
+        this.tweenText();
+      }
+    });
+    const ease = Power4.easeOut;
+    tl.from(title, 0.45, { x: 50, opacity: 0, ease: ease }, 0.0);
+    tl.from(subtitle, 0.45, { x: 50, opacity: 0, ease: ease }, 0.05);
+    tl.from(cta, 0.45, { x: 50, opacity: 0, ease: ease }, 0.1);
+    tl.from(un, 0.45, { width: "80vw", opacity: 0, ease: ease }, 0.15);
   }
 
   /**
@@ -68,20 +63,19 @@ export default class Home extends Vue {
    */
   public transitionOut(done: any) {
     // Tween in
-    const { title, subtitle, cta, underscore } = this.$refs;
-    const tl = new TimelineLite();
-
-    tl.to(title, 0.35, { x: -50, opacity: 0 }, 0.0);
-    tl.to(subtitle, 0.35, { x: -50, opacity: 0 }, 0.05);
-    tl.to(cta, 0.35, { x: -50, opacity: 0 }, 0.1);
-    tl.to(
-      underscore,
-      0.35,
-      { width: "0vw", transformOrigin: "0% 0%", opacity: 0, onComplete: done },
-      0.15
-    );
+    const { title, subtitle, cta, un } = this.$refs;
+    //
+    const tl = new TimelineLite({ onComplete: done });
+    const ease = Power4.easeIn;
+    tl.to(title, 0.75, { x: -50, opacity: 0, ease: ease }, 0.0);
+    tl.to(subtitle, 0.75, { x: -50, opacity: 0, ease: ease }, 0.05);
+    tl.to(cta, 0.75, { x: -50, opacity: 0, ease: ease }, 0.1);
+    tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.15);
   }
 
+  /**
+   * tweenText
+   */
   public tweenText(): void {
     const { keyword } = this.$refs;
     if (keyword) {
@@ -89,10 +83,11 @@ export default class Home extends Vue {
       if (this.index === (this as any).$t.home.title_keywords.length) {
         this.index = 0;
       }
+      //
       const text = (this as any).$t.home.title_keywords[this.index];
-      TweenLite.to(keyword, 0.5, {
+      TweenLite.to(keyword, 0.75, {
         text: text,
-        delay: 1,
+        delay: 1.5,
         onComplete: this.tweenText
       });
     }

@@ -67,14 +67,14 @@
                     "img": "juan"
                 },
                 {
-                    "name": "Mati",
-                    "role": "Designer / Fullstack",
-                    "img": "matias"
-                },
-                {
                     "name": "Marie",
                     "role": "Comercial develop",
                     "img": "marie"
+                },
+                {
+                    "name": "Mati",
+                    "role": "Designer / Fullstack",
+                    "img": "matias"
                 },
                 {
                     "name": "Nacho",

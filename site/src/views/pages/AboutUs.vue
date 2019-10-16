@@ -2,7 +2,7 @@
   <section class="about-us">
     <div>
       <header>
-        <div class="brand">
+        <div ref="logo" class="brand">
           <router-link to="/">
             <svg viewBox="0 0 81 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -24,12 +24,12 @@
             </svg>
           </router-link>
         </div>
-        <h1 class="h2">{{$t.about_us.title}}</h1>
-        <p class="subtitle">{{$t.about_us.subtitle}}</p>
+        <h1 ref="title" class="h2">{{$t.about_us.title}}</h1>
+        <p ref="subtitle" class="subtitle">{{$t.about_us.subtitle}}</p>
       </header>
       <div class="team">
-        <h2 class="h2">{{$t.about_us.team.title}}</h2>
-        <ul>
+        <h2 ref="team" class="h2">{{$t.about_us.team.title}}</h2>
+        <ul ref="teamList">
           <li v-for="item in $t.about_us.team.list" :key="item.name">
             <div class="card">
               <div class="img">
@@ -43,18 +43,19 @@
           </li>
         </ul>
       </div>
-      <div class="cta-container">
+      <div ref="cta" class="cta-container">
         <router-link class="button black" to="/culture">
           <span>{{$t.about_us.cta}}</span>
         </router-link>
       </div>
     </div>
-    <span class="underscore"></span>
+    <span ref="un" class="underscore"></span>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { TimelineLite, Power4 } from "gsap";
 
 @Component({
   components: {}
@@ -80,14 +81,51 @@ export default class AboutUs extends Vue {
    * transitionIn
    */
   public transitionIn(done: any) {
-    done();
+    const {
+      logo,
+      title,
+      subtitle,
+      team,
+      teamList,
+      cta,
+      un
+    } = this.$refs;
+    //
+    const tl = new TimelineLite({ onComplete: done });
+    const ease = Power4.easeOut;
+    tl.from(title, 0.45, { x: 50, opacity: 0, ease: ease }, 0.0);
+    tl.from(subtitle, 0.45, { x: 50, opacity: 0, ease: ease }, 0.05);
+    tl.from(team, 0.45, { x: 50, opacity: 0, ease: ease }, 0.1);
+    tl.from(teamList, 0.45, { x: 50, opacity: 0, ease: ease }, 0.15);
+    tl.from(cta, 0.45, { x: 50, opacity: 0, ease: ease }, 0.2);
+    tl.from(un, 0.45, { width: "80vw", opacity: 0, ease: ease }, 0.25);
+    tl.from(logo, 0.45, { x: 50, opacity: 0, ease: ease }, 0.3);
   }
 
   /**
-   * transitionOut
+   * transitionIn
    */
   public transitionOut(done: any) {
-    done();
+    // Tween in
+    const {
+      logo,
+      title,
+      subtitle,
+      team,
+      teamList,
+      cta,
+      un
+    } = this.$refs;
+    //
+    const tl = new TimelineLite({ onComplete: done });
+    const ease = Power4.easeIn;
+    tl.to(logo, 0.75, { x: -50, opacity: 0, ease: ease }, 0.0);
+    tl.to(title, 0.75, { x: -50, opacity: 0, ease: ease }, 0.05);
+    tl.to(subtitle, 0.75, { x: -50, opacity: 0, ease: ease }, 0.1);
+    tl.to(team, 0.75, { x: -50, opacity: 0, ease: ease }, 0.15);
+    tl.to(teamList, 0.75, { x: -50, opacity: 0, ease: ease }, 0.2);
+    tl.to(cta, 0.75, { x: -50, opacity: 0, ease: ease }, 0.25);
+    tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.3);
   }
 }
 </script>
