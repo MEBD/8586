@@ -11,9 +11,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import Nav from "@/views/components/Nav.vue"; // @ is an alias to /src
 
-import "gsap/CSSPlugin";
-import "gsap/TextPlugin";
-
 @Component({
   components: {
     Nav
@@ -61,28 +58,58 @@ export default class Home extends Vue {
 <style lang="scss">
 @import "./styles/main.scss";
 
-#app {
+#app,
+.nav {
   transition: background-color 1.5s $ease-out;
+}
 
+#app {
   &.color-white {
     color: $white;
+    .nav a {
+      color: $white;
+    }
+    .nav svg path {
+      fill: $white;
+    }
   }
   &.background-white {
     background: $white;
+    .nav {
+      background: $white;
+    }
   }
 
   &.color-black {
     color: $black;
+    .nav a {
+      color: $black;
+    }
+    .nav svg path {
+      fill: $black;
+    }
   }
   &.background-black {
     background: $black;
+    .nav {
+      background: $black;
+    }
   }
 
   &.color-primary {
     color: $primary;
+    .nav a {
+      color: $primary;
+    }
+    .nav svg path {
+      fill: $primary;
+    }
   }
   &.background-primary {
     background: $primary;
+    .nav {
+      background: $primary;
+    }
   }
 }
 </style>

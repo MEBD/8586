@@ -65,6 +65,7 @@ export default class AboutUs extends Vue {
    * mounted
    */
   public mounted(): void {
+    // Colors
     this.$store.state.ui.color = "black";
     this.$store.state.ui.background = "primary";
     this.$store.state.ui.hideLogo = true;
@@ -81,18 +82,11 @@ export default class AboutUs extends Vue {
    * transitionIn
    */
   public transitionIn(done: any) {
-    const {
-      logo,
-      title,
-      subtitle,
-      team,
-      teamList,
-      cta,
-      un
-    } = this.$refs;
+    const { logo, title, subtitle, team, teamList, cta, un } = this.$refs;
     //
     const tl = new TimelineLite({ onComplete: done });
     const ease = Power4.easeOut;
+    tl.to(document.documentElement, 0, { scrollTo: 0 }, 0.0);
     tl.from(title, 0.45, { x: 50, opacity: 0, ease: ease }, 0.0);
     tl.from(subtitle, 0.45, { x: 50, opacity: 0, ease: ease }, 0.05);
     tl.from(team, 0.45, { x: 50, opacity: 0, ease: ease }, 0.1);
@@ -107,15 +101,7 @@ export default class AboutUs extends Vue {
    */
   public transitionOut(done: any) {
     // Tween in
-    const {
-      logo,
-      title,
-      subtitle,
-      team,
-      teamList,
-      cta,
-      un
-    } = this.$refs;
+    const { logo, title, subtitle, team, teamList, cta, un } = this.$refs;
     //
     const tl = new TimelineLite({ onComplete: done });
     const ease = Power4.easeIn;

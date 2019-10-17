@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav" :class="colorClass">
+  <nav class="nav">
     <div class="brand">
       <router-link to="/" :class="{'hide':hideLogo}">
         <svg viewBox="0 0 81 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,13 +26,6 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Nav extends Vue {
-  /**
-   * colorClass
-   */
-  public get colorClass(): string {
-    return this.$store.state.ui.color;
-  }
-  
   /**
    * hideLogo
    */
@@ -101,15 +94,6 @@ export default class Nav extends Vue {
     font-weight: 700;
     letter-spacing: 1px;
   }
-
-  &.white a {color: $white;}
-  &.white svg path {fill: $white;}
-
-  &.black a {color: $black;}
-  &.black svg path {fill: $black;}
-
-  &.primary a {color: $primary;}
-  &.primary svg path {fill: $primary;}
 }
 
 </style>

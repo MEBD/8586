@@ -6,15 +6,15 @@
         "contact": "Contacto"
     },
     "home": {
-        "title": "We made",
+        "title": "Creamos",
         "title_keywords": [
-            "Brands",
-            "Websites",
-            "Mobile apps",
-            "Magic"
+            "Marcas",
+            "Sitios web",
+            "Aplicaciones",
+            "Diseño"
         ],
-        "subtitle": "We work developing digital solutions in order to create creative connections and innovative experiences using the latest technologies.",
-        "cta": "See our services"
+        "subtitle": "Trabajamos desarrollando soluciones digitales para crear conexiones creativas y experiencias innovadoras utilizando las últimas tecnologías.",
+        "cta": "Mira nuestros servicios"
     },
     "services": {
         "title": "Si no lo sabemos, lo aprendemos.",
@@ -55,43 +55,79 @@
         "cta": "Conocenos"
     },
     "about_us": {
-        "title": "Quien somos?",
-        "subtitle": "Somos un grupo de personas que aman su trabajo. Nos apaciona la magia de internet ya que es el entorno perfecto estar en constante movimiento y nosotros no paramos nunca.",
+        "title": "¿Quien somos?",
+        "subtitle": "Somos un grupo de personas que aman su trabajo. Nos apaciona la magia de internet ya que es el entorno perfecto para estar en constante movimiento y nosotros no paramos nunca.",
         "team": {
-            "title": "The team",
+            "title": "El equipo",
             "list": [
                 {
                     "name": "Juan",
-                    "role": "Amos de la internet",
+                    "role": "Desarrolo de Negocios",
                     "img": "juan"
                 },
                 {
-                    "name": "Matias",
-                    "role": "Amos de la internet",
-                    "img": "matias"
-                },
-                {
                     "name": "Marie",
-                    "role": "Amos de la internet",
+                    "role": "Desarrolo de Negocios",
                     "img": "marie"
                 },
                 {
-                    "name": "Ignacia",
-                    "role": "Amos de la internet",
-                    "img": "ignacia"
+                    "name": "Vero",
+                    "role": "Communication creative",
+                    "img": "veronica"
                 },
                 {
-                    "name": "Rodriga",
-                    "role": "Amos de la internet",
-                    "img": "rodriga"
+                    "name": "Matias",
+                    "role": "Designer / Fullstack",
+                    "img": "matias"
+                },
+                {
+                    "name": "Nacho",
+                    "role": "Fullstack.Backend",
+                    "img": "ignacio"
+                },
+                {
+                    "name": "Rodri",
+                    "role": "Fullstack.Backend",
+                    "img": "rodrigo"
                 },
                 {
                     "name": "Thiago",
-                    "role": "Amos de la internet",
+                    "role": "Fullstack.Frontend",
                     "img": "thiago"
                 }
             ]
         },
-        "cta": "Nestra cultura"
+        "cta": "Nuestra cultura"
+    },
+    "culture": {
+        "list": [
+            {
+                "title": "Cultura",
+                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+            },
+            {
+                "title": "Visión",
+                "subtitle": "Nuestra visión consiste en trabajar comprometidos con nuestros clientes, resolviendo sus problemas, desarrollando a pleno sus potencialidades y haciéndolo realmente competente en el mundo virtual. Por eso ofrecemos nuestros servicios con un valor agregado: el trato cercano, transparente y eficaz. Crear un vínculo de confianza es nuestra mayor motivación!"
+            },
+            {
+                "title": "Desafío",
+                "subtitle": "Nuestro desafío consiste en maximizar la competitividad y la productividad de tu negocio poniendo al servicio de tus necesidades todo nuestro conocimiento, creatividad y experiencia."
+            }
+        ],
+        "cta": "Contactanos"
+    },
+    "contact": {
+        "list": [
+            {
+                "place": "Malta",
+                "email": "malta@8586.agency",
+                "phone": "+ 00356 27 52 20 22"
+            },
+            {
+                "place": "Bs. As. Argentina",
+                "email": "argentina@8586.agency",
+                "phone": "+ 54 9 11 3424 0508"
+            }
+        ]
     }
 }

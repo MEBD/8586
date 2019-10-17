@@ -80,6 +80,7 @@ export default class Services extends Vue {
     //
     const tl = new TimelineLite({ onComplete: done });
     const ease = Power4.easeOut;
+    tl.to(document.documentElement, 0, { scrollTo: 0 }, 0.0);
     tl.from(title, 0.45, { x: 50, opacity: 0, ease: ease }, 0.0);
     tl.from(subtitle, 0.45, { x: 50, opacity: 0, ease: ease }, 0.05);
     tl.from(unOne, 0.45, { x: 50, opacity: 0, ease: ease }, 0.15);
