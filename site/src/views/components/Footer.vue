@@ -7,10 +7,10 @@
       <ul>
         <li class="contact-item" v-for="item in $t.contact.list" :key="item.place">
           <h5 class="h6">{{item.place}}</h5>
-          <a class="link" :href="'tel:'+item.phone" target="_blank">
+          <a class="link default" :href="'tel:'+item.phone" target="_blank">
             <span>{{item.phone}}</span>
           </a>
-          <a class="link" :href="'mailto:'+item.email" target="_blank">
+          <a class="link default" :href="'mailto:'+item.email" target="_blank">
             <span>{{item.email}}</span>
           </a>
         </li>
@@ -46,9 +46,10 @@ export default class Footer extends Vue {}
 @import "../../styles/main.scss";
 
 .footer {
-  padding: $gap $gap * 0.75;
+  padding: $gap*1.5 $gap * 0.75;
   background: $black;
   color: $white;
+  border-top: 1px solid rgba($color: $white, $alpha: 0.25);
 
   @media (min-width: 768px) {
     display: flex;
@@ -75,7 +76,7 @@ export default class Footer extends Vue {}
       padding: $gap*1.5 0 0 0;
 
       @media (min-width: 768px) {
-        padding: 0 $gap * 4 0 0;
+        padding: 0 $gap * 2 0 0;
 
         &:first-child {
           padding-left: $gap * 4;
@@ -93,6 +94,10 @@ export default class Footer extends Vue {}
 
     .link {
       display: block;
+
+      &::before{
+        background: rgba($color: $white, $alpha: 0.25);
+      }
     }
   }
 

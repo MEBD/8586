@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav ref="nav" class="nav">
     <div class="brand">
       <router-link to="/" :class="{'hide':hideLogo}">
         <svg viewBox="0 0 81 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,12 @@
       </router-link>
     </div>
     <div class="menu">
-      <ul class="buttons">
+      <a class="trigger" @click="toggleMenu">
+        <span class="r1"></span>
+        <span class="r2"></span>
+        <span class="r3"></span>
+      </a>
+      <ul ref="buttons" class="buttons">
         <li>
           <router-link class="link" to="/services">
             <span>{{$t.nav.services}}</span>
@@ -54,6 +59,22 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Nav extends Vue {
+  /**
+   * mounted
+   */
+  public mounted(): void {
+    this.$router.afterEach(() => {
+      (this.$refs.nav as HTMLElement).classList.remove("show");
+    });
+  }
+
+  /**
+   * toggleMenu
+   */
+  public toggleMenu(): void {
+    (this.$refs.nav as HTMLElement).classList.toggle("show");
+  }
+
   /**
    *hideLogo
    */

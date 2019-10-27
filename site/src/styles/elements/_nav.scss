@@ -9,24 +9,29 @@
     width: 100%;
     //
     height: $gap * 3;
-    padding: $gap * 0.5 $gap * 0.75;
 
     @media (min-width: 768px) {
         min-height: $gap * 4;
-        padding: $gap * 1 $gap * 2;
     }
 
     .brand {
         overflow: hidden;
         position: relative;
-        max-width: $gap * 4;
-        height: $gap;
+        height: $gap*1;
+        margin: $gap 0 $gap $gap*0.75;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            margin: $gap 0 $gap $gap*2;
+        }
 
         a {
+            display: block;
+            width: 81px;
+            height: 26px;
             transform: translate(0%, 0);
             transition: transform 0.5s $ease-in-out;
             transition-delay: 1s;
-            padding: 0;
 
             &.hide {
                 transition-delay: 0s;
@@ -35,40 +40,144 @@
         }
 
         svg {
-            height: $gap;
-            width: auto;
+            width: 81px;
+            height: 26px;
         }
     }
 
     .menu {
         position: relative;
         display: block;
-        width: $gap;
-        height: $gap;
+        width: $gap*3;
+        height: $gap*3;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            width: initial;
+            height: $gap*4;
+        }
+
+        .trigger {
+            position: relative;
+            display: block;
+            width: $gap*3;
+            height: $gap*3;
+            z-index: 2;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 4px;
+                width: $gap;
+                transform-origin: 50% 50%;
+                //
+                transition: transform 0.5s $ease-in-out;
+
+                &.r1 {
+                    transform: translate(-50%, -10px) scale(1, 1) rotate(0deg);
+                }
+
+                &.r2 {
+                    transform: translate(-50%, 0) scale(1, 1) rotate(0deg);
+                }
+
+                &.r3 {
+                    transform: translate(-50%, 10px) scale(1, 1) rotate(0deg);
+                }
+            }
+        }
 
         .buttons {
+            transform: translate(100%, 0);
             position: absolute;
             display: block;
-            top: 100%;
+            top: 0;
             right: 0;
+            width: 100vw;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
+            padding: $gap*3 0 0 0;
             list-style: none;
+            z-index: 1;
+            //
+            transition: transform 0.5s $ease-in-out;
+
+            @media (min-width: 768px) {
+                transform: translate(0%, 0);
+                position: relative;
+                display: flex;
+                align-items: center;
+                top: initial;
+                right: initial;
+                width: initial;
+                min-height: $gap*4;
+                padding: 0 $gap*1;
+            }
 
             li {
                 display: block;
-                padding: $gap * 0.25 $gap * 0.5;
+                padding: $gap * 0.5 $gap * 0.75;
+
+                @media (min-width: 768px) {
+                    padding: 0 $gap;
+                }
+            }
+
+            .link {
+                font-size: $font-size-4;
+
+                @media (min-width: 768px) {
+                    font-size: $font-size-6;
+                }
+            }
+        }
+    }
+
+    &.show {
+        .brand a.hide {
+            transition-delay: 0s;
+            transform: translate(0%, 0);
+        }
+
+        .menu {
+            .trigger {
+                .r1 {
+                    transform: translate(-50%, 0px) scale(2, 2) rotate(-45deg);
+                }
+
+                .r2 {
+                    transform: translate(-50%, 0) scale(0, 0) rotate(0deg);
+                }
+
+                .r3 {
+                    transform: translate(-50%, 0px) scale(2, 2) rotate(45deg);
+                }
+            }
+
+            .buttons {
+                transform: translate(0%, 0);
             }
         }
     }
 }
 
-.color-white {
-    .nav a {
+.color-white .nav {
+    a {
         color: $white;
     }
-    .nav svg path {
+
+    svg path {
         fill: $white;
+    }
+
+    .trigger span {
+        background: $white;
     }
 }
 
@@ -108,13 +217,17 @@
     }
 }
 
-.color-black {
-    .nav a {
+.color-black .nav {
+    a {
         color: $black;
     }
 
-    .nav svg path {
+    svg path {
         fill: $black;
+    }
+
+    .trigger span {
+        background: $black;
     }
 }
 
@@ -154,16 +267,19 @@
     }
 }
 
-.color-primary {
-    .nav a {
+.color-primary .nav {
+    a {
         color: $primary;
     }
 
-    .nav svg path {
+    svg path {
         fill: $primary;
     }
-}
 
+    .trigger span {
+        background: $primary;
+    }
+}
 
 .background-primary {
     .nav {

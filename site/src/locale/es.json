@@ -81,19 +81,19 @@
                     "img": "matias"
                 },
                 {
+                    "name": "Thiago",
+                    "role": "Fullstack [forn]",
+                    "img": "thiago"
+                },
+                {
                     "name": "Nacho",
-                    "role": "Fullstack.Backend",
+                    "role": "Fullstack [back]",
                     "img": "ignacio"
                 },
                 {
                     "name": "Rodri",
-                    "role": "Fullstack.Backend",
+                    "role": "Fullstack [back]",
                     "img": "rodrigo"
-                },
-                {
-                    "name": "Thiago",
-                    "role": "Fullstack.Frontend",
-                    "img": "thiago"
                 }
             ]
         },

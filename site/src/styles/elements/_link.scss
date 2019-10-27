@@ -7,25 +7,65 @@
 
     span {
         z-index: 2;
+        transition: color 0.35s $ease-in-out;
     }
 
     &::before {
         content: "";
-        transform-origin: 0% 0%;
+        transform-origin: 100% 0%;
         transform: scale(0, 1);
         display: block;
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
+        left: -$gap * 0.25;
+        width: calc(100% + #{$gap*0.5});
         height: 100%;
-        background: $primary;
         transition: transform 0.35s $ease-in-out;
     }
 
+    &.router-link-active,
     &:hover {
         &::before {
+            transform-origin: 0% 0%;
             transform: scale(1, 1);
         }
+    }
+}
+
+.background-white .link:not(.default) {
+
+    &.router-link-active span,
+    &:hover span {
+        color: $black;
+    }
+
+    &::before {
+        background: $primary;
+    }
+}
+
+
+.background-black .link:not(.default) {
+
+    &.router-link-active span,
+    &:hover span {
+        color: $black;
+    }
+
+    &::before {
+        background: $primary;
+    }
+}
+
+
+.background-primary .link:not(.default) {
+
+    &.router-link-active span,
+    &:hover span {
+        color: $primary;
+    }
+
+    &::before {
+        background: $black;
     }
 }
