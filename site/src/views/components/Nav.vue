@@ -81,6 +81,13 @@ export default class Nav extends Vue {
   public get hideLogo(): boolean {
     return this.$store.state.ui.hideLogo;
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

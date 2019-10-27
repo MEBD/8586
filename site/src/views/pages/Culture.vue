@@ -69,6 +69,13 @@ export default class Culture extends Vue {
     tl.to(cta, 0.47, { x: -50, opacity: 0, ease: ease }, 0.4);
     tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.45);
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

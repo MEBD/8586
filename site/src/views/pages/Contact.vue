@@ -70,6 +70,13 @@ export default class Contact extends Vue {
     });
     tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.25);
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

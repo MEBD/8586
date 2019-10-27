@@ -113,6 +113,13 @@ export default class AboutUs extends Vue {
     tl.to(cta, 0.75, { x: -50, opacity: 0, ease: ease }, 0.25);
     tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.3);
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

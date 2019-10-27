@@ -54,6 +54,13 @@ export default class Home extends Vue {
       this.$store.state.ui.background
     );
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

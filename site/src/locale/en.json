@@ -10,115 +10,126 @@
         "title_keywords": [
             "Brands",
             "Websites",
-            "Expiriences",
-            "Mobile apps",
+            "Experiences",
+            "Apps",
+            "Designs",
             "Magic"
         ],
-        "subtitle": "We develop digital solutions for create creative connections and innovative experiences using the latest technologies.",
+        "subtitle": "We develop digital solutions to create creative projetcs and innovative experiences using the most advanced technologies.",
         "cta": "See our services"
     },
     "services": {
-        "title": "If we do not know, we learn",
-        "subtitle": "We are a multidisciplinary team which perfectly complements to achieve projects that communicate and consolidate ideas reliably.",
+        "title": "In constant motion.",
+        "subtitle": "We are a multidisciplinary team, we complement one another to create experiences that connect, communicate and strenghten ideas in a trustworthy way.",
         "strategy": {
-            "title": "Strategy",
+            "title": "Strategies",
             "list": [
-                "Research",
+                "Researches",
                 "Planning",
-                "Ecosystems",
-                "Social strategy",
-                "Brand concept",
+                "Ecosystem",
+                "Social Strategy",
+                "Branding",
                 "Business rules",
-                "Content Development"
+                "Content development"
             ]
         },
         "creative": {
-            "title": "Creative",
+            "title": "Creativity",
             "list": [
                 "Brand design",
                 "Creative campaign",
-                "Design UI / UX",
-                "Visual concept",
+                "UI/UX Design",
+                "Visual Concept",
                 "Product design",
-                "Radaction"
+                "Content writting"
             ]
         },
         "technology": {
-            "title": "Technology",
+            "title": "Technologies",
             "list": [
                 "HTML/JS/CSS",
                 "PHP/Python/.Net",
-                "Native apps",
-                "CMS y platforms",
-                "Mails system"
+                "Applications",
+                "CMS and plateforms",
+                "Emailing system"
             ]
         },
-        "cta": "Meet us"
+        "cta": "Know us"
     },
     "about_us": {
         "title": "Who are we?",
-        "subtitle": "We are a group of people who love their work. We find the magic of the internet because it is the perfect environment to be in constant motion and we never stop.",
+        "subtitle": "We are a group of people in love with their jobs. We are passionate about the magic of the internet, for us it is the perfect place where to constantly evolve, so we never stop.",
         "team": {
-            "title": "The team",
+            "title": "Team",
             "list": [
                 {
-                    "name": "John",
-                    "role": "Comercial develop",
+                    "name": "Juan",
+                    "role": "Business developer",
                     "img": "juan"
                 },
                 {
                     "name": "Marie",
-                    "role": "Comercial develop",
+                    "role": "Business developer",
                     "img": "marie"
                 },
                 {
-                    "name": "Mati",
-                    "role": "Designer / Fullstack",
+                    "name": "Vero",
+                    "role": "Content creator",
+                    "img": "veronica"
+                },
+                {
+                    "name": "Matias",
+                    "role": "Fullstack (design)",
                     "img": "matias"
                 },
                 {
+                    "name": "Thiago",
+                    "role": "Fullstack (front)",
+                    "img": "thiago"
+                },
+                {
                     "name": "Nacho",
-                    "role": "Fullstack [Backend]",
+                    "role": "Fullstack (back)",
                     "img": "ignacio"
                 },
                 {
                     "name": "Rodri",
-                    "role": "Fullstack [Backend]",
+                    "role": "Fullstack (back)",
                     "img": "rodrigo"
-                },
-                {
-                    "name": "Thiago",
-                    "role": "Fullstack [Frontend]",
-                    "img": "thiago"
-                },
-                {
-                    "name": "Vero",
-                    "role": "Communication creative",
-                    "img": "veronica"
                 }
             ]
         },
-        "cta": "Check our culture"
+        "cta": "Nuestra cultura"
     },
     "culture": {
         "list": [
             {
-                "title": "Cultura",
-                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+                "title": "Culture",
+                "subtitle": "We are professionals but we never stop enjoying what we do, and that is the most important. We also think that all projects are important just the same, all our clients deserve the best of all our team."
             },
             {
-                "title": "Valores",
-                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+                "title": "Vision",
+                "subtitle": "Our vision is that we totally commit our team to our clients, we solve their problems, we develop all their potential, we help them to be more competitive in the virtual world of internet.  Our added value is : we are very close to our clients, we are transparant and very effective. Building trust between each other os our source of motivation!"
             },
             {
-                "title": "Visión",
-                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
-            },
-            {
-                "title": "Eco",
-                "subtitle": "Somos profesionales pero no dejamos de divertirnos. Creemos que todos los proyectos son igual de importantes y que cada cliente se merece lo mejor de nosotros."
+                "title": "Challenge",
+                "subtitle": "Our challenge is to maximize the competitiveness  and the productivity of your business using all our knowledge, creativity and experience at your service."
             }
         ],
         "cta": "Contact us"
+    },
+    "contact": {
+        "list": [
+            {
+                "place": "Malta",
+                "email": "hi.ma@8586.agency",
+                "phone": "+35677345279"
+            },
+            {
+                "place": "Bs. As. Argentina",
+                "email": "hi.ar@8586.agency",
+                "phone": "+5491134046246"
+            }
+        ]
     }
 }

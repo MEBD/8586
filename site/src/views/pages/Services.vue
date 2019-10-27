@@ -136,6 +136,13 @@ export default class Services extends Vue {
     tl.to(cta, 0.75, { x: -50, opacity: 0, ease: ease }, 0.4);
     tl.to(un, 0.75, { width: "0vw", opacity: 0, ease: ease }, 0.45);
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 
@@ -166,7 +173,7 @@ export default class Services extends Vue {
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 $gap $gap * 4 $gap * 2;
+      padding: 0 $gap $gap * 2 $gap * 2;
     }
 
     article {
@@ -174,7 +181,7 @@ export default class Services extends Vue {
 
       @media (min-width: 768px) {
         min-width: $gap * 10;
-        padding: 0 $gap 0 0;
+        padding: 0 $gap $gap * 2 0;
       }
     }
 

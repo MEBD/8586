@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="brand">
-      <p>8586©</p>
+      <p>©2019</p>
     </div>
     <div class="contact">
       <ul>
@@ -16,19 +16,16 @@
         </li>
       </ul>
     </div>
-    <div class="social">
+    <div class="languages">
       <ul>
         <li>
-          <p>Instagram</p>
+          <a class="link default" href="#" @click="changeLanguage($event, 'en')">en/</a>
         </li>
         <li>
-          <p>Facebook</p>
+          <a class="link default" href="#" @click="changeLanguage($event, 'es')">es/</a>
         </li>
         <li>
-          <p>Dribbble</p>
-        </li>
-        <li>
-          <p>Behance</p>
+          <a class="link default" href="#" @click="changeLanguage($event, 'fr')">fr/</a>
         </li>
       </ul>
     </div>
@@ -39,14 +36,37 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+  /**
+   * changeLanguage
+   */
+  public changeLanguage($event: MouseEvent, lang: string): void {
+    this.$store.state.locale.current = lang;
+
+    // Storage
+    if (typeof Storage !== "undefined") {
+      localStorage.setItem("current_lang", lang);
+    }
+
+    //
+    $event.preventDefault();
+    $event.stopPropagation();
+  }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
+}
 </script>
 
 <style scoped lang="scss">
 @import "../../styles/main.scss";
 
 .footer {
-  padding: $gap*1.5 $gap * 0.75;
+  padding: $gap * 1.5 $gap * 0.75;
   background: $black;
   color: $white;
   border-top: 1px solid rgba($color: $white, $alpha: 0.25);
@@ -73,7 +93,7 @@ export default class Footer extends Vue {}
 
   .contact {
     li {
-      padding: $gap*1.5 0 0 0;
+      padding: $gap * 1.5 0 0 0;
 
       @media (min-width: 768px) {
         padding: 0 $gap * 2 0 0;
@@ -95,16 +115,15 @@ export default class Footer extends Vue {}
     .link {
       display: block;
 
-      &::before{
+      &::before {
         background: rgba($color: $white, $alpha: 0.25);
       }
     }
   }
 
-  .social {
+  .languages {
     flex: 1;
     display: flex;
-    justify-content: center;
     padding-top: $gap;
 
     @media (min-width: 768px) {
@@ -112,15 +131,20 @@ export default class Footer extends Vue {}
       justify-content: flex-end;
     }
 
-    li {
-      padding: 0 $gap * 0.5;
+    ul {
+      display: flex;
 
-      &:first-child {
-        padding-left: 0;
+      @media (min-width: 768px) {
+        display: block;
       }
+    }
 
-      &:last-child {
-        padding-right: 0;
+    li {
+      padding: 0;
+      margin: 0 $gap 0 0;
+
+      @media (min-width: 768px) {
+        margin: 0;
       }
     }
   }

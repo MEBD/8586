@@ -100,6 +100,13 @@ export default class Home extends Vue {
   public beforeDestroy(): void {
     window.clearInterval(this.timer);
   }
+
+  /**
+   * $t
+   */
+  public get $t(): any {
+    return this.$store.getters.translate;
+  }
 }
 </script>
 

@@ -118,6 +118,7 @@
                 width: initial;
                 min-height: $gap*4;
                 padding: 0 $gap*1;
+                background: initial;
             }
 
             li {
@@ -213,6 +214,10 @@
 
         .buttons {
             background: $white;
+
+            @media (min-width: 768px) {
+                background: initial;
+            }
         }
     }
 }
@@ -263,6 +268,10 @@
 
         .buttons {
             background: $black;
+
+            @media (min-width: 768px) {
+                background: initial;
+            }
         }
     }
 }
@@ -313,6 +322,10 @@
 
         .buttons {
             background: $primary;
+
+            @media (min-width: 768px) {
+                background: initial;
+            }
         }
     }
 }
