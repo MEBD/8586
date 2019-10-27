@@ -2,70 +2,114 @@
     font-family: $font-famyly;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     font-family: $font-famyly-heading;
     font-weight: 700;
-    margin: 0 0 $gap*0.5 0; 
+    margin: 0 0 $gap*0.25 0;
+
+    @media (min-width: 768px) {
+        margin: 0 0 $gap*0.5 0;
+    }
 }
 
 h1,
 .h1 {
-    font-size: $font-size-1;
+    font-size: $font-size-1*0.55;
     line-height: $line-height-1;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-1;
+    }
 }
 
 h2,
 .h2 {
-    font-size: $font-size-2;
+    font-size: $font-size-2*0.60;
     line-height: $line-height-2;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-2;
+    }
 }
 
 h3,
 .h3 {
-    font-size: $font-size-3;
+    font-size: $font-size-3*0.65;
     line-height: $line-height-3;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-3;
+    }
 }
 
 h4,
 .h4 {
-    font-size: $font-size-4;
+    font-size: $font-size-4*0.70;
     line-height: $line-height-4;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-4;
+    }
 }
 
 h5,
 .h5 {
-    font-size: $font-size-5;
+    font-size: $font-size-5*0.75;
     line-height: $line-height-5;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-5;
+    }
 }
 
 h6,
 .h6 {
     font-size: $font-size-6;
     line-height: $line-height-6;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-6;
+    }
 }
 
-p, ul, ol, dl, .body,
+p,
+ul,
+ol,
+dl,
+.body,
 .body-small,
 .body-big {
     font-weight: 400;
     margin: 0 0 $gap*0.5 0;
-    
+
     &:last-child {
         margin-bottom: 0;
     }
 }
 
-p, ul, ol, dl, .body {
+p,
+ul,
+ol,
+dl,
+.body {
     font-size: $font-size-6;
     line-height: $line-height-6;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
     padding-left: $gap;
 }
 
@@ -74,6 +118,14 @@ ul, ol, dl {
 }
 
 // Placeholder
-::-webkit-input-placeholder { color: $black; }
-:-ms-input-placeholder { color: $black; }
-::placeholder { color: $black; }
+::-webkit-input-placeholder {
+    color: $black;
+}
+
+:-ms-input-placeholder {
+    color: $black;
+}
+
+::placeholder {
+    color: $black;
+}

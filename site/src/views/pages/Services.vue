@@ -47,7 +47,7 @@ import { TimelineLite, Power4 } from "gsap";
 })
 export default class Services extends Vue {
   /**
-   * mounted
+   *mounted
    */
   public mounted(): void {
     this.$store.state.ui.color = "black";
@@ -55,7 +55,7 @@ export default class Services extends Vue {
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(done: any) {
     const {
@@ -97,7 +97,7 @@ export default class Services extends Vue {
   }
 
   /**
-   * transitionOut
+   *transitionOut
    */
   public transitionOut(done: any) {
     const {
@@ -144,21 +144,38 @@ export default class Services extends Vue {
 
 .services {
   header {
-    padding: $gap * 2;
+    width: 100%;
+    padding: 0 $gap * 0.75 $gap;
+
+    @media (min-width: 768px) {
+      padding: $gap * 2;
+    }
   }
 
   .h2 {
-    margin-bottom: $gap;
+    margin-bottom: $gap * 0.5;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap;
+    }
   }
 
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: $gap * 2 $gap $gap $gap * 2;
+    padding: $gap $gap * 0.75 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 $gap $gap * 4 $gap * 2;
+    }
 
     article {
-      min-width: $gap * 10;
-      padding: 0 $gap $gap 0;
+      padding: 0 0 $gap * 2 0;
+
+      @media (min-width: 768px) {
+        min-width: $gap * 10;
+        padding: 0 $gap 0 0;
+      }
     }
 
     .underscore {
@@ -166,11 +183,19 @@ export default class Services extends Vue {
       left: initial;
       bottom: initial;
       width: 100%;
-      margin-bottom: $gap;
+      margin-bottom: $gap * 0.75;
+
+      @media (min-width: 768px) {
+        margin-bottom: $gap;
+      }
     }
 
     .h3 {
-      margin-bottom: $gap;
+      margin-bottom: $gap * 0.25;
+
+      @media (min-width: 768px) {
+        margin-bottom: $gap;
+      }
     }
 
     ul {
@@ -182,14 +207,6 @@ export default class Services extends Vue {
     li {
       padding: $gap * 0.1 0;
     }
-  }
-
-  .cta-container {
-    padding: 0 $gap * 2;
-  }
-
-  .underscore {
-    background: $primary;
   }
 }
 </style>

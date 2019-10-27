@@ -8,7 +8,7 @@
         </strong>
       </h1>
       <p ref="subtitle" class="subtitle">{{$t.home.subtitle}}</p>
-      <div ref="cta" class="cta-container">
+      <div ref="cta">
         <router-link class="button primary" to="/services">
           <span>{{$t.home.cta}}</span>
         </router-link>
@@ -30,7 +30,7 @@ export default class Home extends Vue {
   public timer: any;
 
   /**
-   * mounted
+   *mounted
    */
   public mounted(): void {
     this.$store.state.ui.color = "white";
@@ -40,7 +40,7 @@ export default class Home extends Vue {
   //gsap.to(graph, { duration: 2.5 ease: CustomEase.create("custom", "M0,0 C0,0.692 0.003,0.798 0.112,0.888 0.248,1 0.504,1 1,1"), y: -500 });
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(done: any) {
     const { title, subtitle, cta, un } = this.$refs;
@@ -60,7 +60,7 @@ export default class Home extends Vue {
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionOut(done: any) {
     // Tween in
@@ -75,7 +75,7 @@ export default class Home extends Vue {
   }
 
   /**
-   * tweenText
+   *tweenText
    */
   public tweenText(): void {
     const { keyword } = this.$refs;
@@ -95,7 +95,7 @@ export default class Home extends Vue {
   }
 
   /**
-   * beforeDestroy
+   *beforeDestroy
    */
   public beforeDestroy(): void {
     window.clearInterval(this.timer);
@@ -126,15 +126,36 @@ export default class Home extends Vue {
 
 .home {
   header {
-    padding: $gap * 4 $gap * 2;
+    padding: 0 $gap * 0.75;
+
+    @media (min-width: 768px) {
+      padding: $gap * 4 $gap * 2;
+    }
   }
 
   h1 {
     display: block;
-    margin-bottom: $gap;
+    margin-bottom: $gap * 0.5;
+
+    @media (min-width: 1280px) {
+      margin-bottom: $gap;
+    }
 
     strong {
+      display: block;
       color: $primary;
+
+      @media (min-width: 1280px) {
+        display: initial;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-bottom: $gap * 2;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap * 4;
     }
   }
 }

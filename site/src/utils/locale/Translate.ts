@@ -1,12 +1,12 @@
 export default class Translate {
   /**
-   * Install
-   * @param Vue
+  *Install
+  *@param Vue
    */
   public static install(Vue: any): void {
     Vue.mixin({
       /**
-       * Created
+      *Created
        */
       created() {
         this.$t = this.$store.state.locale[this.$store.state.locale.current];

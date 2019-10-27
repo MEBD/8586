@@ -1,7 +1,7 @@
 export default class BodyScroll {
   /**
-   * Block
-   * @param {boolean} block
+  *Block
+  *@param {boolean} block
    */
   public static block(block: boolean): void {
     if (block) {

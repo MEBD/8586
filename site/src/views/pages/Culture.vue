@@ -28,7 +28,7 @@ import { TimelineLite, Power4 } from "gsap";
 })
 export default class Culture extends Vue {
   /**
-   * mounted
+   *mounted
    */
   public mounted(): void {
     this.$store.state.ui.color = "white";
@@ -36,7 +36,7 @@ export default class Culture extends Vue {
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(done: any) {
     const { cta, un } = this.$refs;
@@ -54,7 +54,7 @@ export default class Culture extends Vue {
   }
 
   /**
-   * transitionOut
+   *transitionOut
    */
   public transitionOut(done: any) {
     const { cta, un } = this.$refs;
@@ -76,32 +76,36 @@ export default class Culture extends Vue {
 @import "../../styles/utilities/variables";
 
 .culture {
-  header {
-    padding: $gap * 2;
-  }
-
   .h1 {
-    margin-bottom: $gap*0.5;
+    margin-bottom: $gap * 0.5;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap;
+    }
   }
 
   .subtitle {
-    margin-bottom: $gap * 4;
+    margin-bottom: $gap * 2;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap * 4;
+    }
   }
 
   .content {
     display: flex;
     flex-wrap: wrap;
-    padding: $gap * 2 $gap * 2 0 $gap * 2;
+    padding: $gap * 0.75 $gap * 0.75 0 $gap * 0.75;
+
+    @media (min-width: 768px) {
+      padding: $gap * 2 $gap * 2 0 $gap * 2;
+    }
 
     ul {
       padding: 0;
       margin: 0;
       list-style: none;
     }
-  }
-
-  .cta-container {
-    padding: 0 $gap * 2;
   }
 }
 </style>

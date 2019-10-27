@@ -62,7 +62,7 @@ import { TimelineLite, Power4 } from "gsap";
 })
 export default class AboutUs extends Vue {
   /**
-   * mounted
+   *mounted
    */
   public mounted(): void {
     // Colors
@@ -72,14 +72,14 @@ export default class AboutUs extends Vue {
   }
 
   /**
-   * beforeDestroy
+   *beforeDestroy
    */
   public beforeDestroy(): void {
     this.$store.state.ui.hideLogo = false;
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(done: any) {
     const { logo, title, subtitle, team, teamList, cta, un } = this.$refs;
@@ -97,7 +97,7 @@ export default class AboutUs extends Vue {
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionOut(done: any) {
     // Tween in
@@ -121,14 +121,23 @@ export default class AboutUs extends Vue {
 
 .about-us {
   header {
-    padding: $gap * 2;
+    padding: 0 $gap * 0.75 $gap;
+
+    @media (min-width: 768px) {
+      padding: $gap * 2;
+    }
   }
 
   .brand {
     margin-bottom: $gap * 2;
+
     svg {
-      height: $gap * 5;
+      height: $gap * 2;
       width: auto;
+
+      @media (min-width: 768px) {
+        height: $gap * 5;
+      }
     }
 
     path {
@@ -137,24 +146,44 @@ export default class AboutUs extends Vue {
   }
 
   .h2 {
-    margin-bottom: $gap;
+    margin-bottom: $gap * 0.25;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap;
+    }
   }
 
   .team {
-    padding: $gap * 2 0 0 $gap * 2;
-    max-width: $gap * 12 * 3;
+    padding: $gap $gap * 0.75 $gap * 2;
+
+    @media (min-width: 768px) {
+      max-width: $gap * 11 * 3;
+      padding: 0 0 $gap * 3 $gap * 2;
+    }
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
       list-style: none;
       margin: 0;
-      padding: 0 $gap $gap 0;
+      padding: 0;
+
+      @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 $gap $gap 0;
+      }
 
       li {
         display: block;
-        padding: 0 $gap $gap 0;
-        width: $gap * 10;
+        padding: 0 0 $gap * 0.75 0;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+          width: $gap * 10;
+          padding: 0 $gap $gap 0;
+        }
       }
 
       .img {
@@ -183,21 +212,13 @@ export default class AboutUs extends Vue {
     }
   }
 
-  .cta-container {
-    padding: 0 $gap * 2;
+  .button {
+    color: $primary;
 
-    .button {
-      color: $primary;
-
-      &:hover {
-        color: $black;
-        background: $white;
-      }
+    &:hover {
+      color: $black;
+      background: $white;
     }
-  }
-
-  .underscore {
-    background: $black;
   }
 }
 </style>

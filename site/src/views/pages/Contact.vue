@@ -31,7 +31,7 @@ import { TimelineLite, Power4 } from "gsap";
 })
 export default class Contact extends Vue {
   /**
-   * mounted
+   *mounted
    */
   public mounted(): void {
     this.$store.state.ui.color = "black";
@@ -39,7 +39,7 @@ export default class Contact extends Vue {
   }
 
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(done: any) {
     const { un } = this.$refs;
@@ -56,7 +56,7 @@ export default class Contact extends Vue {
   }
 
   /**
-   * transitionOut
+   *transitionOut
    */
   public transitionOut(done: any) {
     const { un } = this.$refs;
@@ -77,63 +77,42 @@ export default class Contact extends Vue {
 @import "../../styles/utilities/variables";
 
 .contact {
-  header {
-    padding: $gap * 2;
-  }
-
   .h1 {
     margin-bottom: $gap * 0.5;
+
+    @media (min-width: 768px) {
+      margin-bottom: $gap;
+    }
   }
 
   .subtitle {
-    margin-bottom: $gap * 4;
+    color: $white;
+    margin-bottom: $gap * 2;
+
+    .link {
+      color: $black;
+    }
+
+    @media (min-width: 768px) {
+      color: $black;
+      margin-bottom: $gap * 4;
+    }
   }
 
   .content {
     display: flex;
     flex-wrap: wrap;
-    padding: $gap * 2 $gap * 2 0 $gap * 2;
+    padding: $gap * 0.75 $gap * 0.75 0 $gap * 0.75;
 
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
+    @media (min-width: 768px) {
+      padding: $gap * 2 $gap * 2 0 $gap * 2;
     }
   }
 
-  .link {
-    display: inline-flex;
-    position: relative;
-    color: inherit;
-    text-decoration: none;
-
-    span {
-      z-index: 2;
-    }
-
-    &::before {
-      content: "";
-      transform-origin: 0% 0%;
-      transform: scale(0, 1);
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $primary;
-      transition: transform 0.35s $ease-in-out;
-    }
-
-    &:hover {
-      &::before {
-        transform: scale(1, 1);
-      }
-    }
-  }
-
-  .underscore {
-    background: $black;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 }
 </style>

@@ -4,21 +4,24 @@
     <transition mode="out-in" @appear="transitionIn" @enter="transitionIn" @leave="transitionOut">
       <router-view />
     </transition>
+    <Footer />
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Nav from "@/views/components/Nav.vue"; // @ is an alias to /src
+import Footer from "@/views/components/Footer.vue"; // @ is an alias to /src
 
 @Component({
   components: {
-    Nav
+    Nav,
+    Footer
   }
 })
 export default class Home extends Vue {
   /**
-   * transitionIn
+   *transitionIn
    */
   public transitionIn(el: any, done: any): void {
     this.$children.forEach((page: any) => {
@@ -29,7 +32,7 @@ export default class Home extends Vue {
   }
 
   /**
-   * transitionOut
+   *transitionOut
    */
   public transitionOut(el: any, done: any): void {
     this.$children.forEach((page: any) => {
@@ -40,7 +43,7 @@ export default class Home extends Vue {
   }
 
   /**
-   * colorClass
+   *colorClass
    */
   public get colorClass(): string {
     return (
@@ -58,58 +61,26 @@ export default class Home extends Vue {
 <style lang="scss">
 @import "./styles/main.scss";
 
-#app,
-.nav {
-  transition: background-color 1.5s $ease-out;
-}
-
 #app {
   &.color-white {
     color: $white;
-    .nav a {
-      color: $white;
-    }
-    .nav svg path {
-      fill: $white;
-    }
   }
   &.background-white {
     background: $white;
-    .nav {
-      background: $white;
-    }
   }
 
   &.color-black {
     color: $black;
-    .nav a {
-      color: $black;
-    }
-    .nav svg path {
-      fill: $black;
-    }
   }
   &.background-black {
     background: $black;
-    .nav {
-      background: $black;
-    }
   }
 
   &.color-primary {
     color: $primary;
-    .nav a {
-      color: $primary;
-    }
-    .nav svg path {
-      fill: $primary;
-    }
   }
   &.background-primary {
     background: $primary;
-    .nav {
-      background: $primary;
-    }
   }
 }
 </style>

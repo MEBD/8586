@@ -1,6 +1,11 @@
 .subtitle {
     max-width: $gap*24;
-    font-size: $font-size-4;
-    margin-bottom: $gap*2;
+    font-size: $font-size-6;
+    margin-bottom: $gap;
     letter-spacing: 1px;
+
+    @media (min-width: 768px) {
+        font-size: $font-size-4;
+        margin-bottom: $gap*2;
+    }
 }

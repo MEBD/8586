@@ -1,0 +1,202 @@
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: $z-nav;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //
+    height: $gap * 3;
+    padding: $gap * 0.5 $gap * 0.75;
+
+    @media (min-width: 768px) {
+        min-height: $gap * 4;
+        padding: $gap * 1 $gap * 2;
+    }
+
+    .brand {
+        overflow: hidden;
+        position: relative;
+        max-width: $gap * 4;
+        height: $gap;
+
+        a {
+            transform: translate(0%, 0);
+            transition: transform 0.5s $ease-in-out;
+            transition-delay: 1s;
+            padding: 0;
+
+            &.hide {
+                transition-delay: 0s;
+                transform: translate(-100%, 0);
+            }
+        }
+
+        svg {
+            height: $gap;
+            width: auto;
+        }
+    }
+
+    .menu {
+        position: relative;
+        display: block;
+        width: $gap;
+        height: $gap;
+
+        .buttons {
+            position: absolute;
+            display: block;
+            top: 100%;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: block;
+                padding: $gap * 0.25 $gap * 0.5;
+            }
+        }
+    }
+}
+
+.color-white {
+    .nav a {
+        color: $white;
+    }
+    .nav svg path {
+        fill: $white;
+    }
+}
+
+.background-white {
+    .nav {
+        background: rgba($white, 1);
+        background: -moz-linear-gradient(top,
+                rgba($white, 1) 0%,
+                rgba($white, 1) 52%,
+                rgba($white, 0) 100%);
+        background: -webkit-gradient(left top,
+                left bottom,
+                color-stop(0%, rgba($white, 1)),
+                color-stop(52%, rgba($white, 1)),
+                color-stop(100%, rgba($white, 0)));
+        background: -webkit-linear-gradient(top,
+                rgba($white, 1) 0%,
+                rgba($white, 1) 52%,
+                rgba($white, 0) 100%);
+        background: -o-linear-gradient(top,
+                rgba($white, 1) 0%,
+                rgba($white, 1) 52%,
+                rgba($white, 0) 100%);
+        background: -ms-linear-gradient(top,
+                rgba($white, 1) 0%,
+                rgba($white, 1) 52%,
+                rgba($white, 0) 100%);
+        background: linear-gradient(to bottom,
+                rgba($white, 1) 0%,
+                rgba($white, 1) 52%,
+                rgba($white, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$white}', endColorstr='#{$white}', GradientType=0);
+
+        .buttons {
+            background: $white;
+        }
+    }
+}
+
+.color-black {
+    .nav a {
+        color: $black;
+    }
+
+    .nav svg path {
+        fill: $black;
+    }
+}
+
+.background-black {
+    .nav {
+        background: rgba($black, 1);
+        background: -moz-linear-gradient(top,
+                rgba($black, 1) 0%,
+                rgba($black, 1) 52%,
+                rgba($black, 0) 100%);
+        background: -webkit-gradient(left top,
+                left bottom,
+                color-stop(0%, rgba($black, 1)),
+                color-stop(52%, rgba($black, 1)),
+                color-stop(100%, rgba($black, 0)));
+        background: -webkit-linear-gradient(top,
+                rgba($black, 1) 0%,
+                rgba($black, 1) 52%,
+                rgba($black, 0) 100%);
+        background: -o-linear-gradient(top,
+                rgba($black, 1) 0%,
+                rgba($black, 1) 52%,
+                rgba($black, 0) 100%);
+        background: -ms-linear-gradient(top,
+                rgba($black, 1) 0%,
+                rgba($black, 1) 52%,
+                rgba($black, 0) 100%);
+        background: linear-gradient(to bottom,
+                rgba($black, 1) 0%,
+                rgba($black, 1) 52%,
+                rgba($black, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$black}', endColorstr='#{$black}', GradientType=0);
+
+        .buttons {
+            background: $black;
+        }
+    }
+}
+
+.color-primary {
+    .nav a {
+        color: $primary;
+    }
+
+    .nav svg path {
+        fill: $primary;
+    }
+}
+
+
+.background-primary {
+    .nav {
+        background: rgba($primary, 1);
+        background: -moz-linear-gradient(top,
+                rgba($primary, 1) 0%,
+                rgba($primary, 1) 52%,
+                rgba($primary, 0) 100%);
+        background: -webkit-gradient(left top,
+                left bottom,
+                color-stop(0%, rgba($primary, 1)),
+                color-stop(52%, rgba($primary, 1)),
+                color-stop(100%, rgba($primary, 0)));
+        background: -webkit-linear-gradient(top,
+                rgba($primary, 1) 0%,
+                rgba($primary, 1) 52%,
+                rgba($primary, 0) 100%);
+        background: -o-linear-gradient(top,
+                rgba($primary, 1) 0%,
+                rgba($primary, 1) 52%,
+                rgba($primary, 0) 100%);
+        background: -ms-linear-gradient(top,
+                rgba($primary, 1) 0%,
+                rgba($primary, 1) 52%,
+                rgba($primary, 0) 100%);
+        background: linear-gradient(to bottom,
+                rgba($primary, 1) 0%,
+                rgba($primary, 1) 52%,
+                rgba($primary, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$primary}', endColorstr='#{$primary}', GradientType=0);
+
+        .buttons {
+            background: $primary;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.link {
+    display: inline-flex;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.8;
+
+    span {
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        transform-origin: 0% 0%;
+        transform: scale(0, 1);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary;
+        transition: transform 0.35s $ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            transform: scale(1, 1);
+        }
+    }
+}

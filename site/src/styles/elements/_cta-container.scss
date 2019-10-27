@@ -1,0 +1,7 @@
+.cta-container {
+  padding: 0 $gap * 0.75;
+
+  @media (min-width: 768px) {
+    padding: 0 $gap * 2;
+  }
+}
