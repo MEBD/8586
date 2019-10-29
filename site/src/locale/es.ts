@@ -1,3 +1,4 @@
+const LANG_ES =
 {
     "nav": {
         "services": "Servicios",
@@ -133,3 +134,4 @@
         ]
     }
 }
+export default { LANG_ES };

@@ -9,9 +9,7 @@
       </h1>
       <p ref="subtitle" class="subtitle">{{$t.home.subtitle}}</p>
       <div ref="cta">
-        <router-link class="button primary" to="/services">
-          <span>{{$t.home.cta}}</span>
-        </router-link>
+        <button-to class="primary" to="/services" :text="$t.home.cta" />
       </div>
     </header>
     <span ref="un" class="underscore"></span>

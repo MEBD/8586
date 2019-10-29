@@ -10,9 +10,7 @@
         </ul>
       </div>
       <div ref="cta" class="cta-container">
-        <router-link class="button primary" to="/contact">
-          <span>{{$t.culture.cta}}</span>
-        </router-link>
+        <button-to class="primary" to="/contact" :text="$t.culture.cta" />
       </div>
     </div>
     <span ref="un" class="underscore"></span>

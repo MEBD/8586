@@ -29,9 +29,7 @@
         </article>
       </div>
       <div ref="cta" class="cta-container">
-        <router-link class="button black" to="/about-us">
-          <span>{{$t.services.cta}}</span>
-        </router-link>
+        <button-to class="black" to="/about-us" :text="$t.services.cta" />
       </div>
     </div>
     <span ref="un" class="underscore"></span>

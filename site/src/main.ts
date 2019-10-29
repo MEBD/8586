@@ -10,6 +10,10 @@ require('gsap/umd/ScrollToPlugin');
 
 Vue.config.productionTip = false
 
+// Components
+import ButtonTo from "@/views/components/ButtonTo.vue";
+Vue.component('button-to', ButtonTo);
+
 new Vue({
   router,
   store,

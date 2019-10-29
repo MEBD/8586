@@ -44,9 +44,7 @@
         </ul>
       </div>
       <div ref="cta" class="cta-container">
-        <router-link class="button black" to="/culture">
-          <span>{{$t.about_us.cta}}</span>
-        </router-link>
+        <button-to to="/culture" :text="$t.about_us.cta" />
       </div>
     </div>
     <span ref="un" class="underscore"></span>
@@ -219,12 +217,16 @@ export default class AboutUs extends Vue {
     }
   }
 
-  .button {
+  .button-to {
     color: $primary;
+    background: $black;
+
+    &:before {
+      background: $white;
+    }
 
     &:hover {
       color: $black;
-      background: $white;
     }
   }
 }
